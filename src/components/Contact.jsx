@@ -19,6 +19,7 @@ export default function Contact() {
   const [goal, setGoal] = useState(goals[0])
   const [msg, setMsg] = useState('')
 
+  // opens WhatsApp with the message pre-filled; the visitor taps send there
   const submit = (e) => {
     e.preventDefault()
     const text = `Hi Ravi, I'm ${name.trim()}. My goal: ${goal}.${msg.trim() ? '\n' + msg.trim() : ''}`

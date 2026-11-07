@@ -92,6 +92,15 @@
         "src": "assets/img/p6.webp",
         "alt": "Ravi Kiran at lockout on a heavy deadlift"
       }
+    },
+    {
+      "title": "Cycling",
+      "text": "Bums on the saddle - 155km",
+      "media": {
+        "type": "video",
+        "src": "assets/vid/img-0213-mw68iqgi.mov",
+        "poster": "assets/vid/img-0213-mw68iqgi.jpg"
+      }
     }
   ],
   "lab": {

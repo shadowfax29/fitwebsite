@@ -1,0 +1,121 @@
+{
+  "brand": { "name": "mrrk_27", "initials": "RK" },
+  "hero": {
+    "eyebrow": "Fitness Coach · Bengaluru / Hyderabad",
+    "intro": {
+      "name": "Ravi Kiran",
+      "before": "My approach goes beyond building muscle — it's about developing",
+      "highlight": "strength, endurance, mobility and functional performance",
+      "after": "Powerlifting, running, cycling and weighted calisthenics, all in one capable body."
+    },
+    "tags": ["Hybrid Training", "Powerlifting", "Calisthenics", "Functional Fitness", "Strength & Conditioning"],
+    "media": { "type": "video", "src": "assets/vid/IMG_9315.mp4", "poster": "assets/vid/IMG_9315.jpg" },
+    "videoLabel": "LIVE SET · DEADLIFT",
+    "chips": [
+      { "label": "Deadlift", "value": "200", "unit": "kg" },
+      { "label": "Half marathon", "value": "sub 2", "unit": "hr" }
+    ]
+  },
+  "marquee": ["200 KG DEADLIFT", "150 KG SQUAT", "90 KG BENCH", "+50 KG DIPS", "+50 KG CHIN-UP", "5K SUB 25", "21K SUB 2:00", "155 KM RIDE SUB 8 HR"],
+  "disciplines": [
+    {
+      "title": "Hybrid Training",
+      "text": "Lift heavy and still run far. Programming that builds strength without sacrificing the engine — from 5K to half marathon to 155 km in the saddle.",
+      "media": { "type": "image", "src": "assets/img/p1.webp", "alt": "Ravi Kiran with a finisher medal at the Hyderabad 5K" }
+    },
+    {
+      "title": "Powerlifting",
+      "text": "Squat, bench, deadlift — taught with tight technique and progressive overload. Personal bests: 150 / 90 / 200 kg.",
+      "media": { "type": "video", "src": "assets/vid/IMG_9315.mp4", "poster": "assets/vid/IMG_9315.jpg" }
+    },
+    {
+      "title": "Calisthenics",
+      "text": "Handstands, planche work, dips and pull-ups — then loaded with weight. Master your bodyweight first, then add to it.",
+      "media": { "type": "image", "src": "assets/img/p7.webp", "alt": "Ravi Kiran holding a handstand on parallettes" }
+    },
+    {
+      "title": "Functional Fitness",
+      "text": "Movement that carries over to real life: stability, unilateral strength, mobility and control under load.",
+      "media": { "type": "video", "src": "assets/vid/IMG_9375.mp4", "poster": "assets/vid/IMG_9375.jpg" }
+    },
+    {
+      "title": "Strength & Conditioning",
+      "text": "Structured blocks that build muscle, raise work capacity and keep joints healthy for the long run.",
+      "media": { "type": "image", "src": "assets/img/p6.webp", "alt": "Ravi Kiran at lockout on a heavy deadlift" }
+    }
+  ],
+  "lab": {
+    "bodyweight": 67,
+    "lifts": [
+      { "tab": "Deadlift", "name": "Deadlift", "kg": 200 },
+      { "tab": "Squat", "name": "Squat", "kg": 150 },
+      { "tab": "Bench", "name": "Bench Press", "kg": 90 }
+    ],
+    "cards": [
+      {
+        "label": "Running",
+        "lines": [{ "title": "5 km", "value": "sub 25:00" }, { "title": "21 km", "value": "sub 2:00:00" }],
+        "note": "Finisher, Hyderabad 5K."
+      },
+      {
+        "label": "Cycling",
+        "lines": [{ "title": "155 km", "value": "sub 8 hr" }],
+        "note": "Hyderabad Cycling Revolution & AIG Cyclothon rider."
+      },
+      {
+        "label": "Street Lifting",
+        "lines": [{ "title": "Parallel dips", "value": "+50 kg" }, { "title": "Chin-up", "value": "+50 kg" }],
+        "note": "Weighted calisthenics."
+      }
+    ]
+  },
+  "gallery": [
+    { "tag": "Hypertrophy", "cap": "Dumbbell work, controlled reps.", "media": { "type": "video", "src": "assets/vid/IMG_9375.mp4", "poster": "assets/vid/IMG_9375.jpg" } },
+    { "tag": "Race day", "cap": "5K finisher — Hyderabad.", "media": { "type": "image", "src": "assets/img/p1.webp", "alt": "5K finisher medal" } },
+    { "tag": "Calisthenics", "cap": "Handstand on parallettes.", "media": { "type": "image", "src": "assets/img/p7.webp", "alt": "Handstand on parallettes" } },
+    { "tag": "Ride", "cap": "Hyderabad Cycling Revolution · Fit India.", "media": { "type": "image", "src": "assets/img/p2.webp", "alt": "Hyderabad Cycling Revolution Ride for Bharat" } },
+    { "tag": "Powerlifting", "cap": "Belt on, headphones in.", "media": { "type": "image", "src": "assets/img/p6.webp", "alt": "Deadlift lockout" } },
+    { "tag": "Hill repeats", "cap": "Stairs, sunrise, flex.", "media": { "type": "image", "src": "assets/img/p3.webp", "alt": "Double biceps pose on stone steps" } },
+    { "tag": "Calisthenics", "cap": "Planche progressions.", "media": { "type": "image", "src": "assets/img/p8.webp", "alt": "Planche lean on parallettes" } },
+    { "tag": "Ride", "cap": "Bone & Joint Cyclothon, 8 Aug 2026.", "media": { "type": "image", "src": "assets/img/p5.webp", "alt": "AIG Bone and Joint Cyclothon" } },
+    { "tag": "Strength", "cap": "Built, not borrowed.", "media": { "type": "image", "src": "assets/img/p4.webp", "alt": "Flexing on the fort steps" } }
+  ],
+  "coaching": {
+    "cards": [
+      { "title": "Strength Foundations", "text": "Squat, bench, deadlift and pulling/pressing patterns — safe technique and progressive programming." },
+      { "title": "Calisthenics Skills", "text": "From first pull-up to handstands, dips and weighted street lifting — step by step." },
+      { "title": "Hybrid & Endurance", "text": "Running and cycling blended with lifting so you get stronger and fitter together." },
+      { "title": "Nutrition Basics", "text": "Macros, micronutrients and simple meal planning around your goals and dietary needs." }
+    ],
+    "certTitle": "INFS — Basic Fitness & Nutrition",
+    "cert": [
+      { "title": "Basic Fitness Principles", "text": "Exercise types, workout planning, safety." },
+      { "title": "Health & Wellness", "text": "Activity, eating habits, stress management." },
+      { "title": "Nutrition Planning", "text": "Basic meal plans with dietary restrictions in mind." },
+      { "title": "Fitness Assessment", "text": "Cardio, strength, endurance, flexibility, body composition." }
+    ]
+  },
+  "about": {
+    "media": { "type": "image", "src": "assets/img/p3.webp", "alt": "Ravi Kiran portrait" },
+    "badge": "EEE → STRENGTH",
+    "text": "Motivated and passionate about strength training, hybrid training, powerlifting and calisthenics, with a strong interest in muscle development, functional fitness and overall conditioning. I believe in building a well-rounded and capable body — and in helping you discover your potential through structured training, proper exercise guidance and continuous learning.",
+    "facts": [
+      { "title": "Education", "text": "B.E. in EEE" },
+      { "title": "Base", "text": "Bengaluru · Hyderabad" },
+      { "title": "Height / Weight", "text": "175 cm / 67 kg" },
+      { "title": "Languages", "text": "Kannada · Hindi · English · Telugu" },
+      { "title": "Also plays", "text": "Football · Badminton · Swimming" },
+      { "title": "Skills", "text": "Muscle building · Mobility & flexibility" }
+    ]
+  },
+  "contact": {
+    "instagramUrl": "https://www.instagram.com/mrrk_27?utm_source=qr&xtok=YTh2aWE2OWlobGpl",
+    "instagramHandle": "@mrrk_27",
+    "email": "ravi.kiran200011@gmail.com",
+    "phone": "+919206559141",
+    "phoneDisplay": "+91 92065 59141",
+    "whatsapp": "919206559141",
+    "goals": ["Get stronger", "Build muscle", "Improve endurance", "Master bodyweight moves", "Hybrid fitness"]
+  },
+  "footer": { "legalName": "Ravikirangowda S", "tagline": "Strength · Hybrid · Calisthenics" }
+}

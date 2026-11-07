@@ -1,18 +1,9 @@
 import { Reveal, eyebrow, h2, sec, secHead } from '../ui.jsx'
 
-const cards = [
-  ['Strength Foundations', 'Squat, bench, deadlift and pulling/pressing patterns — safe technique and progressive programming.'],
-  ['Calisthenics Skills', 'From first pull-up to handstands, dips and weighted street lifting — step by step.'],
-  ['Hybrid & Endurance', 'Running and cycling blended with lifting so you get stronger and fitter together.'],
-  ['Nutrition Basics', 'Macros, micronutrients and simple meal planning around your goals and dietary needs.'],
-]
+import content from '../content.js'
 
-const cert = [
-  ['Basic Fitness Principles', 'Exercise types, workout planning, safety.'],
-  ['Health & Wellness', 'Activity, eating habits, stress management.'],
-  ['Nutrition Planning', 'Basic meal plans with dietary restrictions in mind.'],
-  ['Fitness Assessment', 'Cardio, strength, endurance, flexibility, body composition.'],
-]
+const cards = content.coaching.cards.map((c) => [c.title, c.text])
+const cert = content.coaching.cert.map((c) => [c.title, c.text])
 
 export default function Coaching() {
   return (
@@ -39,7 +30,7 @@ export default function Coaching() {
       <Reveal className="grid grid-cols-[.8fr_1.2fr] max-[980px]:grid-cols-1 gap-[30px] mt-4 border border-dashed border-[rgba(214,255,61,.45)] rounded-[22px] p-[clamp(22px,3vw,40px)]">
         <div>
           <p className={eyebrow}>Certification</p>
-          <h3 className="font-disp font-black uppercase text-[clamp(2rem,4vw,3.2rem)] leading-[.95]">INFS — Basic Fitness &amp; Nutrition</h3>
+          <h3 className="font-disp font-black uppercase text-[clamp(2rem,4vw,3.2rem)] leading-[.95]">{content.coaching.certTitle}</h3>
         </div>
         <ul className="grid grid-cols-2 max-[760px]:grid-cols-1 gap-[18px]">
           {cert.map(([b, t]) => (

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { prefersReduced } from '../hooks.js'
+import content from '../content.js'
 
 export function Progress() {
   const [w, setW] = useState(0)
@@ -69,9 +70,9 @@ export function Nav() {
           stuck ? 'bg-[rgba(11,11,10,.78)] backdrop-blur-[14px] border-line' : 'border-transparent'
         }`}
       />
-      <a href="#top" aria-label="Ravi Kiran — home" className="flex items-center gap-[10px] font-disp font-extrabold text-[1.3rem] tracking-[.04em] uppercase">
-        <span className="grid place-items-center w-9 h-9 bg-acc text-accink rounded-lg text-[1.05rem]">RK</span>
-        <b>Ravi Kiran</b>
+      <a href="#top" aria-label={`${content.brand.name} — home`} className="flex items-center gap-[10px] font-disp font-extrabold text-[1.3rem] tracking-[.04em] uppercase">
+        <span className="grid place-items-center w-9 h-9 bg-acc text-accink rounded-lg text-[1.05rem]">{content.brand.initials}</span>
+        <b>{content.brand.name}</b>
       </a>
 
       <nav

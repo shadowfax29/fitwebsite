@@ -11,12 +11,10 @@ const PLATES = [
   { kg: 2.5, c: '#444', h: 80 },
   { kg: 1.25, c: '#888', h: 64 },
 ]
-const BW = 67
-const LIFTS = [
-  { kg: 200, name: 'Deadlift', tab: 'Deadlift' },
-  { kg: 150, name: 'Squat', tab: 'Squat' },
-  { kg: 90, name: 'Bench Press', tab: 'Bench' },
-]
+import content from '../content.js'
+
+const BW = Number(content.lab.bodyweight)
+const LIFTS = content.lab.lifts.map((l) => ({ ...l, kg: Number(l.kg) }))
 
 const split = (total) => {
   let side = (total - 20) / 2
@@ -120,30 +118,22 @@ export default function Lab() {
           </div>
           <div>
             <small className="mono block text-muted mb-1.5">Bodyweight</small>
-            <b className="font-disp font-black text-[clamp(2rem,4vw,3.2rem)] leading-[.85]">67<i className="not-italic text-[.32em] text-acc ml-1.5">kg</i></b>
+            <b className="font-disp font-black text-[clamp(2rem,4vw,3.2rem)] leading-[.85]">{BW}<i className="not-italic text-[.32em] text-acc ml-1.5">kg</i></b>
             <span className="mono block text-acc mt-1.5">{(lift.kg / BW).toFixed(1)}× bodyweight</span>
           </div>
         </div>
       </Reveal>
 
       <div className="grid grid-cols-3 max-[980px]:grid-cols-1 gap-4 mt-4">
-        <Reveal own className={pbCard}>
-          <span className="mono text-acc">Running</span>
-          <h3 className={pbH}>5 km <b className={pbB}>sub 25:00</b></h3>
-          <h3 className={pbH}>21 km <b className={pbB}>sub 2:00:00</b></h3>
-          <p className="text-muted mt-[14px] text-[.9rem]">Finisher, Hyderabad 5K.</p>
-        </Reveal>
-        <Reveal own className={pbCard}>
-          <span className="mono text-acc">Cycling</span>
-          <h3 className={pbH}>155 km <b className={pbB}>sub 8 hr</b></h3>
-          <p className="text-muted mt-[14px] text-[.9rem]">Hyderabad Cycling Revolution &amp; AIG Cyclothon rider.</p>
-        </Reveal>
-        <Reveal own className={pbCard}>
-          <span className="mono text-acc">Street Lifting</span>
-          <h3 className={pbH}>Parallel dips <b className={pbB}>+50 kg</b></h3>
-          <h3 className={pbH}>Chin-up <b className={pbB}>+50 kg</b></h3>
-          <p className="text-muted mt-[14px] text-[.9rem]">Weighted calisthenics.</p>
-        </Reveal>
+        {content.lab.cards.map((c) => (
+          <Reveal own key={c.label} className={pbCard}>
+            <span className="mono text-acc">{c.label}</span>
+            {c.lines.map((l) => (
+              <h3 key={l.title} className={pbH}>{l.title} <b className={pbB}>{l.value}</b></h3>
+            ))}
+            <p className="text-muted mt-[14px] text-[.9rem]">{c.note}</p>
+          </Reveal>
+        ))}
       </div>
     </section>
   )

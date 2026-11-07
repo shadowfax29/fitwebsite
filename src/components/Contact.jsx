@@ -1,7 +1,10 @@
 import { useState } from 'react'
 import { Arrow, Reveal, btn, eyebrow, h2, secHead } from '../ui.jsx'
 
-const goals = ['Get stronger', 'Build muscle', 'Improve endurance', 'Master bodyweight moves', 'Hybrid fitness']
+import content from '../content.js'
+
+const c = content.contact
+const goals = c.goals
 const goalLabel = { 'Master bodyweight moves': 'Master bodyweight' }
 
 const field =
@@ -9,9 +12,9 @@ const field =
 const label = 'grid gap-2 font-bold text-[.85rem]'
 
 const links = [
-  ['https://instagram.com/mrrk_27', 'Instagram', '@mrrk_27', true],
-  ['mailto:ravi.kiran200011@gmail.com', 'Email', 'ravi.kiran200011@gmail.com'],
-  ['tel:+919206559141', 'Phone', '+91 92065 59141'],
+  [c.instagramUrl, 'Instagram', c.instagramHandle, true],
+  ['mailto:' + c.email, 'Email', c.email],
+  ['tel:' + c.phone, 'Phone', c.phoneDisplay],
 ]
 
 export default function Contact() {
@@ -23,7 +26,7 @@ export default function Contact() {
   const submit = (e) => {
     e.preventDefault()
     const text = `Hi Ravi, I'm ${name.trim()}. My goal: ${goal}.${msg.trim() ? '\n' + msg.trim() : ''}`
-    open('https://wa.me/919206559141?text=' + encodeURIComponent(text), '_blank', 'noopener')
+    open(`https://wa.me/${c.whatsapp}?text=` + encodeURIComponent(text), '_blank', 'noopener')
   }
 
   return (

@@ -2,24 +2,16 @@ import { useEffect, useRef } from 'react'
 import { usePlayInView } from '../hooks.js'
 import { Reveal, eyebrow, h2, secHead } from '../ui.jsx'
 
-const items = [
-  { v: 'IMG_9375', tag: 'Hypertrophy', cap: 'Dumbbell work, controlled reps.' },
-  { i: 'p1', alt: '5K finisher medal', tag: 'Race day', cap: '5K finisher — Hyderabad.' },
-  { i: 'p7', alt: 'Handstand on parallettes', tag: 'Calisthenics', cap: 'Handstand on parallettes.' },
-  { i: 'p2', alt: 'Hyderabad Cycling Revolution Ride for Bharat', tag: 'Ride', cap: 'Hyderabad Cycling Revolution · Fit India.' },
-  { i: 'p6', alt: 'Deadlift lockout', tag: 'Powerlifting', cap: 'Belt on, headphones in.' },
-  { i: 'p3', alt: 'Double biceps pose on stone steps', tag: 'Hill repeats', cap: 'Stairs, sunrise, flex.' },
-  { i: 'p8', alt: 'Planche lean on parallettes', tag: 'Calisthenics', cap: 'Planche progressions.' },
-  { i: 'p5', alt: 'AIG Bone and Joint Cyclothon', tag: 'Ride', cap: 'Bone & Joint Cyclothon, 8 Aug 2026.' },
-  { i: 'p4', alt: 'Flexing on the fort steps', tag: 'Strength', cap: 'Built, not borrowed.' },
-]
+import content, { asset } from '../content.js'
+
+const items = content.gallery
 
 const mediaCls = 'w-full h-full object-cover pointer-events-none transition-transform duration-[800ms] group-hover/fig:scale-[1.06]'
 
-function Clip({ id }) {
+function Clip({ src, poster }) {
   const ref = useRef(null)
   usePlayInView(ref)
-  return <video ref={ref} className={mediaCls} src={`/assets/vid/${id}.mp4`} poster={`/assets/vid/${id}.jpg`} muted loop playsInline preload="none" />
+  return <video ref={ref} className={mediaCls} src={asset(src)} poster={asset(poster)} muted loop playsInline preload="none" />
 }
 
 const Chevron = ({ d }) => (
@@ -69,10 +61,14 @@ export default function Gallery() {
       >
         {items.map((it) => (
           <figure
-            key={it.tag + (it.i || it.v)}
+            key={it.tag + it.media.src}
             className="group/fig relative shrink-0 basis-[clamp(240px,26vw,380px)] aspect-[3/4] rounded-[22px] overflow-hidden snap-start border border-line bg-card even:mt-9 max-[760px]:even:mt-0 after:content-[''] after:absolute after:inset-x-0 after:top-1/2 after:bottom-0 after:bg-[linear-gradient(transparent,rgba(0,0,0,.85))]"
           >
-            {it.v ? <Clip id={it.v} /> : <img className={mediaCls} src={`/assets/img/${it.i}.webp`} alt={it.alt} loading="lazy" />}
+            {it.media.type === 'video' ? (
+              <Clip src={it.media.src} poster={it.media.poster} />
+            ) : (
+              <img className={mediaCls} src={asset(it.media.src)} alt={it.media.alt || ''} loading="lazy" />
+            )}
             <figcaption className="absolute z-[2] left-[18px] right-[18px] bottom-4 text-[.92rem] leading-[1.35]">
               <b className="mono block text-acc mb-1 font-bold">{it.tag}</b>
               {it.cap}
